@@ -1,7 +1,14 @@
 import React from "react";
+import AppRouter from "./router";
+import GlobalStyle from "./styles/global";
 
-const App = () => {
-  return <div>Clean project</div>;
-};
+function App() {
+	return (
+		<>
+			<GlobalStyle />
+			<AppRouter />
+		</>
+	);
+}
 
 export default App;

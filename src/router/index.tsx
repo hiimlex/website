@@ -1,7 +1,15 @@
 import React from "react";
+import Home from "../pages/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const Routes = () => {
-  return <div>asd</div>;
+const AppRouter = () => {
+	return (
+		<Router>
+			<Switch>
+				<Route path="/" component={Home} />
+			</Switch>
+		</Router>
+	);
 };
 
-export default Routes;
+export default AppRouter;
