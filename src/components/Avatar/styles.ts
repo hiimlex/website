@@ -5,7 +5,7 @@ export const AvatarStyle = styled.img`
 	bottom: 5%;
 	width: 26vw;
 	max-width: 348px;
-	right: 20%;
+	right: 30%;
 	cursor: pointer;
 	z-index: 2;
 	transition: all 0.1s ease-in-out;

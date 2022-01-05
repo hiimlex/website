@@ -29,7 +29,7 @@ export const Description = styled.span`
 `;
 
 export const MainContent = styled.div`
-	margin-left: 160px;
+	margin-left: 120px;
 	margin-top: 18px;
 
 	z-index: 4;
