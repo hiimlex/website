@@ -15,7 +15,7 @@ const Header = () => {
 	const location = useLocation();
 
 	const handleLocation = () => {
-		return location.pathname;
+		return location.pathname.replace("/", "");
 	};
 
 	return (
@@ -28,7 +28,7 @@ const Header = () => {
 			<Light />
 
 			<Navbar>
-				<NavbarItem active={handleLocation() === "/website/"}>Me</NavbarItem>
+				<NavbarItem active={handleLocation() === "website"}>Me</NavbarItem>
 				<NavbarItem
 					active={false}
 					onClick={() => navigateToUrl("https://hiimlex.github.io/portfolio")}
