@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const CarpetStyle = styled.img`
 	position: absolute;
-	bottom: -25%;
-	right: 42%;
-	width: 45%;
-	z-index: 0;
+	bottom: 0;
+	right: 10%;
+	width: 40vw;
+	max-width: 562px;
+	z-index: 1;
 `;
