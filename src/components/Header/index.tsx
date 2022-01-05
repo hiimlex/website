@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router";
 import { navigateToUrl } from "../../utils/navigateToUrl";
 import Light from "../Light";
@@ -17,6 +17,8 @@ const Header = () => {
 	const handleLocation = () => {
 		return location.pathname.replace("/", "");
 	};
+
+	useEffect(() => console.log(handleLocation()));
 
 	return (
 		<HeaderContent>
