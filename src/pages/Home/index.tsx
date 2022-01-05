@@ -88,7 +88,9 @@ const Home = () => {
 							<Light />
 
 							<Navbar>
-								<NavbarItem active={handleLocation() === "/"}>Me</NavbarItem>
+								<NavbarItem active={handleLocation() === "/website"}>
+									Me
+								</NavbarItem>
 								<NavbarItem active={false} onClick={openCreativePortfolio}>
 									Portfolio
 								</NavbarItem>

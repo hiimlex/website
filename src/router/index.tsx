@@ -6,7 +6,7 @@ const AppRouter = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/" component={Home} />
+				<Route path="/website" component={Home} />
 			</Switch>
 		</Router>
 	);
