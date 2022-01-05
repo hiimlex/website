@@ -10,12 +10,12 @@ export const LightStyle = styled.img`
 	min-width: 88px;
 	max-width: 162px;
 
-	cursor: pointer;
+	/* cursor: pointer;
 	transition: all 0.1s ease-in-out;
 
 	&:hover {
 		-webkit-filter: drop-shadow(4px 4px 0 #ffffff99)
 			drop-shadow(-4px -4px 0 #ffffff99);
 		filter: drop-shadow(4px 4px 0 #ffffff99) drop-shadow(-4px -4px 0 #ffffff99);
-	}
+	} */
 `;
