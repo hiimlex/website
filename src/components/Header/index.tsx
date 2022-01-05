@@ -15,10 +15,8 @@ const Header = () => {
 	const location = useLocation();
 
 	const handleLocation = () => {
-		return location.pathname.replace("/", "");
+		return location.pathname.split("/");
 	};
-
-	useEffect(() => console.log(handleLocation()));
 
 	return (
 		<HeaderContent>
@@ -30,7 +28,9 @@ const Header = () => {
 			<Light />
 
 			<Navbar>
-				<NavbarItem active={handleLocation() === "website"}>Me</NavbarItem>
+				<NavbarItem active={handleLocation().includes("website")}>
+					Me
+				</NavbarItem>
 				<NavbarItem
 					active={false}
 					onClick={() => navigateToUrl("https://hiimlex.github.io/portfolio")}
