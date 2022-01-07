@@ -17,7 +17,7 @@ export const TextTop = styled.div`
 			transform: translate3d(0, 100%, 0);
 		}
 		40% {
-			transform: translate3d(0, 70%, 0);
+			transform: translate3d(0, 80%, 0);
 		}
 		60% {
 			transform: translate3d(0, 40%, 0);
@@ -30,7 +30,7 @@ export const TextTop = styled.div`
 		}
 	}
 
-	height: 65%;
+	height: 60%;
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
@@ -42,7 +42,7 @@ export const TextTop = styled.div`
 		animation-delay: 0.5s;
 		animation-fill-mode: forwards;
 		bottom: 0;
-		transform: translate(0, 100%);
+		transform: translate(0, 1000%);
 	}
 `;
 
@@ -57,7 +57,7 @@ export const TextBottom = styled.div`
 	}
 
 	bottom: 0;
-	height: 35%;
+	height: 40%;
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
@@ -71,14 +71,33 @@ export const TextBottom = styled.div`
 	}
 `;
 
-export const MainText = styled.p`
-	margin-bottom: 24px;
-	font-size: 3.4rem;
+export const MainText = styled.span`
+	margin-bottom: 12px;
+	font-size: 3rem;
 	line-height: normal;
 	letter-spacing: 0.15rem !important;
 	font-weight: bold;
 	color: #fff;
 	margin: 0;
+	line-height: 2rem;
+
+	display: block;
+`;
+
+export const Name = styled.span`
+	font-size: 4.4rem;
+	line-height: normal;
+	letter-spacing: 0.15rem !important;
+	font-weight: bold;
+	color: #f0c06a;
+	margin: 0;
+	text-shadow: -4px 4px 0 #ffffff, -2px 0 0 #ffffff, 0 2px 0 #ffffff,
+		0 -2px 0 #ffffff, 1px 1px #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff,
+		-1px 1px 0 #ffffff;
+
+		margin-left: 4px;
+
+	display: block;
 `;
 
 export const Description = styled.span`

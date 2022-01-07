@@ -10,6 +10,7 @@ import {
 	TextTop,
 	AnimatedTile,
 	TextBottom,
+	Name,
 } from "./styles";
 import {
 	BsGithub,
@@ -49,7 +50,7 @@ const Main = () => {
 			<TextTop>
 				<div>
 					<MainText>Hi I'm</MainText>
-					<MainText>Alex Alves</MainText>
+					<Name>Alex Alves</Name>
 					<Description>Frontend Developer and UX/UI Designer.</Description>
 					<DotLine />
 				</div>
