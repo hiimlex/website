@@ -11,19 +11,20 @@ export const Scenario = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	overflow: hidden;
 `;
 
 export const Content = styled.div`
 	width: 1280px;
-	height: auto;
+	height: 100vh;
+	overflow: hidden;
 
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	justify-content: space-between;
 	z-index: 1;
+	position: relative;
 
 	@media only screen and (max-width: 1280px) {
 		width: 90%;

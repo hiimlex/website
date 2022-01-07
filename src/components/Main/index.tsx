@@ -1,18 +1,15 @@
 import React from "react";
 import { navigateToUrl } from "../../utils/navigateToUrl";
-import Avatar from "../Avatar";
-import Carpet from "../Carpet";
-import Phone from "../Phone";
-import Pictures from "../Pictures";
 import {
-	MainContainer,
-	MainContent,
 	MainText,
 	Description,
 	DotLine,
 	SocialsText,
 	SocialsIcons,
 	Icon,
+	TextTop,
+	AnimatedTile,
+	TextBottom,
 } from "./styles";
 import {
 	BsGithub,
@@ -21,15 +18,10 @@ import {
 	BsTwitch,
 	BsTwitter,
 } from "react-icons/bs";
-import Guitars from "../Guitars";
 
 type Socials = "github" | "instagram" | "linkedin" | "twitch" | "twitter";
 
-interface MainProps {
-	onPhoneClick: () => void;
-}
-
-const Main = ({ onPhoneClick }: MainProps) => {
+const Main = () => {
 	const handleSocialNav = (social: Socials) => {
 		switch (social) {
 			case "github":
@@ -53,53 +45,53 @@ const Main = ({ onPhoneClick }: MainProps) => {
 	};
 
 	return (
-		<MainContainer>
-			<MainContent>
-				<MainText>Hi I'm</MainText>
-				<MainText>Alex Alves</MainText>
-				<Description>Frontend Developer and UX/UI Designer.</Description>
-				<DotLine />
-				<SocialsText>SOCIALS</SocialsText>
-				<SocialsIcons>
-					<Icon style={{ marginLeft: 0 }}>
-						<BsGithub
-							size={24}
-							onClick={() => handleSocialNav("github")}
-						></BsGithub>
-					</Icon>
-					<Icon>
-						<BsLinkedin
-							size={24}
-							onClick={() => handleSocialNav("linkedin")}
-						></BsLinkedin>
-					</Icon>
-					<Icon>
-						<BsInstagram
-							size={24}
-							onClick={() => handleSocialNav("instagram")}
-						></BsInstagram>
-					</Icon>
-					<Icon>
-						<BsTwitter
-							size={24}
-							onClick={() => handleSocialNav("twitter")}
-						></BsTwitter>
-					</Icon>
-					<Icon>
-						<BsTwitch
-							size={24}
-							onClick={() => handleSocialNav("twitch")}
-						></BsTwitch>
-					</Icon>
-				</SocialsIcons>
-			</MainContent>
-
-			<Avatar />
-			<Carpet />
-			<Pictures />
-			<Phone onClick={onPhoneClick} />
-			<Guitars />
-		</MainContainer>
+		<AnimatedTile>
+			<TextTop>
+				<div>
+					<MainText>Hi I'm</MainText>
+					<MainText>Alex Alves</MainText>
+					<Description>Frontend Developer and UX/UI Designer.</Description>
+					<DotLine />
+				</div>
+			</TextTop>
+			<TextBottom>
+				<div>
+					<SocialsText>SOCIALS</SocialsText>
+					<SocialsIcons>
+						<Icon style={{ marginLeft: 0 }}>
+							<BsGithub
+								size={24}
+								onClick={() => handleSocialNav("github")}
+							></BsGithub>
+						</Icon>
+						<Icon>
+							<BsLinkedin
+								size={24}
+								onClick={() => handleSocialNav("linkedin")}
+							></BsLinkedin>
+						</Icon>
+						<Icon>
+							<BsInstagram
+								size={24}
+								onClick={() => handleSocialNav("instagram")}
+							></BsInstagram>
+						</Icon>
+						<Icon>
+							<BsTwitter
+								size={24}
+								onClick={() => handleSocialNav("twitter")}
+							></BsTwitter>
+						</Icon>
+						<Icon>
+							<BsTwitch
+								size={24}
+								onClick={() => handleSocialNav("twitch")}
+							></BsTwitch>
+						</Icon>
+					</SocialsIcons>
+				</div>
+			</TextBottom>
+		</AnimatedTile>
 	);
 };
 
