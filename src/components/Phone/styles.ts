@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PhoneStyle = styled.img`
 	position: absolute;
 	top: 20%;
-	right: 5%;
+	right: 2%;
 	width: 4vw;
 	max-width: 60px;
 	cursor: pointer;

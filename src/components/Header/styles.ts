@@ -11,6 +11,19 @@ export const HeaderContent = styled.div`
 	justify-content: space-between;
 	position: absolute;
 	top: 0;
+
+	animation: animationHeader 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+
+	@keyframes animationHeader {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 `;
 
 export const Logo = styled.div`
