@@ -12,6 +12,8 @@ export const Container = styled.div<{ fade: boolean }>`
 	z-index: 12;
 
 	box-shadow: 0 0 24px 120px rgba(40, 37, 54, 0.2);
+	border-top-left-radius: 36px;
+	border-top-right-radius: 36px;
 
 	display: flex;
 	align-items: flex-start;
@@ -54,8 +56,8 @@ export const Close = styled.div`
 	position: absolute;
 	width: fit-content;
 	height: fit-content;
-	top: 12px;
-	right: 12px;
+	top: 24px;
+	right: 24px;
 	color: #fff;
 	cursor: pointer;
 `;

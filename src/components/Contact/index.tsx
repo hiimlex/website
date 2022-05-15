@@ -1,4 +1,8 @@
 import React, { useRef, useState } from "react";
+import { useEffect } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { sendMailMessage } from "../../utils/sendMailMessage";
+import { sendWppMessage } from "../../utils/sendWppMessage";
 import Suitcase from "../Suitcase";
 import {
 	Button,
@@ -13,15 +17,13 @@ import {
 	SubTitle,
 	Title,
 } from "./styles";
-import { AiOutlineClose } from "react-icons/ai";
-import { sendWppMessage } from "../../utils/sendWppMessage";
-import { sendMailMessage } from "../../utils/sendMailMessage";
 
 interface ContactProps {
 	onClick: () => void;
 }
 
 const Contact = ({ onClick }: ContactProps) => {
+	const containerRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [fade, setFade] = useState(false);
 
@@ -40,8 +42,25 @@ const Contact = ({ onClick }: ContactProps) => {
 		}, 300);
 	};
 
+	useEffect(() => {
+		function handleClickOutside(event: Event) {
+			if (
+				containerRef.current &&
+				!containerRef.current.contains(event.target as Node)
+			) {
+				fadeOut();
+			}
+		}
+		document.addEventListener("mousedown", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [containerRef]);
+
 	return (
-		<Container fade={fade}>
+		<Container fade={fade} ref={containerRef}>
 			<InfoContent>
 				<Suitcase />
 
