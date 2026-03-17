@@ -7,11 +7,9 @@ import Header from "../../components/Header";
 import Main from "../../components/Main";
 import Phone from "../../components/Phone";
 import Pictures from "../../components/Pictures";
-import useWindowSize from "../../utils/useWindowSize";
 import { Content, Overlay, Room, Scenario, Square } from "./styles";
 
 const Home = () => {
-	const width = useWindowSize()[0];
 	const [showContact, setShowContact] = useState(false);
 
 	const handleShowContact = () => {

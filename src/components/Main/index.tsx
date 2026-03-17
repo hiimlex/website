@@ -25,12 +25,10 @@ const Main = () => {
 	return (
 		<AnimatedTile>
 			<TextTop>
-				<div>
-					<MainText>Hi I'm</MainText>
-					<Name>Alex Alves</Name>
-					<Description>Frontend Developer and UX/UI Designer.</Description>
-					<DotLine />
-				</div>
+				<MainText>Hi I'm</MainText>
+				<Name>Alex Rodrigues</Name>
+				<Description>Frontend Developer and UX/UI Designer.</Description>
+				<DotLine />
 			</TextTop>
 			<TextBottom>
 				<SocialsContainer>

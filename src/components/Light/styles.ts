@@ -7,7 +7,7 @@ export const LightStyle = styled.img`
 	left: 0;
 	right: 0;
 	width: 10%;
-	min-width: 88px;
+	min-width: 100px;
 	max-width: 162px;
 
 	filter: drop-shadow(-12px 12px 12px #00000022);
