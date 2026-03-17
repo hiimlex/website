@@ -1,50 +1,27 @@
-import React from "react";
+import { BsGithub, BsLinkedin, BsTwitch } from "react-icons/bs";
 import { navigateToUrl } from "../../utils/navigateToUrl";
 import {
-	MainText,
+	AnimatedTile,
 	Description,
 	DotLine,
-	SocialsText,
-	SocialsIcons,
 	Icon,
-	TextTop,
-	AnimatedTile,
-	TextBottom,
+	MainText,
 	Name,
+	SocialsContainer,
+	SocialsIcons,
+	SocialsText,
+	TextBottom,
+	TextTop,
 } from "./styles";
-import {
-	BsGithub,
-	BsInstagram,
-	BsLinkedin,
-	BsTwitch,
-	BsTwitter,
-} from "react-icons/bs";
 
-type Socials = "github" | "instagram" | "linkedin" | "twitch" | "twitter";
+type Socials = "github" | "linkedIn" | "twitch";
+const socialLinks: Record<Socials, string> = {
+	github: "https://github.com/hiimlex",
+	linkedIn: "https://www.linkedin.com/in/alex-rodrigues-83558718b/",
+	twitch: "https://www.twitch.tv/yunoal",
+};
 
 const Main = () => {
-	const handleSocialNav = (social: Socials) => {
-		switch (social) {
-			case "github":
-				navigateToUrl("https://github.com/hiimlex");
-				break;
-			case "instagram":
-				navigateToUrl("https://www.instagram.com/alcquis/");
-				break;
-			case "linkedin":
-				navigateToUrl("https://www.linkedin.com/in/alex-rodrigues-83558718b/");
-				break;
-			case "twitch":
-				navigateToUrl("https://www.twitch.tv/wastedyuno");
-				break;
-			case "twitter":
-				navigateToUrl("https://twitter.com/wastedyuno");
-				break;
-			default:
-				return;
-		}
-	};
-
 	return (
 		<AnimatedTile>
 			<TextTop>
@@ -56,41 +33,38 @@ const Main = () => {
 				</div>
 			</TextTop>
 			<TextBottom>
-				<div>
+				<SocialsContainer>
 					<SocialsText>SOCIALS</SocialsText>
 					<SocialsIcons>
-						<Icon style={{ marginLeft: 0 }}>
+						<Icon
+							href={socialLinks.github}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<BsGithub
 								size={24}
-								onClick={() => handleSocialNav("github")}
+								onClick={() => navigateToUrl(socialLinks.github)}
 							></BsGithub>
 						</Icon>
-						<Icon>
+						<Icon
+							href={socialLinks.linkedIn}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<BsLinkedin
 								size={24}
-								onClick={() => handleSocialNav("linkedin")}
+								onClick={() => navigateToUrl(socialLinks.linkedIn)}
 							></BsLinkedin>
 						</Icon>
-						<Icon>
-							<BsInstagram
-								size={24}
-								onClick={() => handleSocialNav("instagram")}
-							></BsInstagram>
-						</Icon>
-						<Icon>
-							<BsTwitter
-								size={24}
-								onClick={() => handleSocialNav("twitter")}
-							></BsTwitter>
-						</Icon>
-						<Icon>
-							<BsTwitch
-								size={24}
-								onClick={() => handleSocialNav("twitch")}
-							></BsTwitch>
+						<Icon
+							href={socialLinks.twitch}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<BsTwitch size={24}></BsTwitch>
 						</Icon>
 					</SocialsIcons>
-				</div>
+				</SocialsContainer>
 			</TextBottom>
 		</AnimatedTile>
 	);

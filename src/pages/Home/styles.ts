@@ -25,10 +25,6 @@ export const Content = styled.div`
 	flex-direction: column;
 	z-index: 1;
 	position: relative;
-
-	@media only screen and (max-width: 1280px) {
-		width: 90%;
-	}
 `;
 
 export const Room = styled.div`
@@ -53,7 +49,8 @@ export const Square = styled.div`
 	--nc: 36; /* number of columns */
 	--b: 2px; /* border length */
 
-	background: repeating-linear-gradient(
+	background:
+		repeating-linear-gradient(
 			to right,
 			transparent 0 calc((100% - var(--b) * (var(--nc) - 1)) / var(--nc)),
 			#ffffff05 0

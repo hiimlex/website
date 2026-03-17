@@ -36,4 +36,11 @@ export const PicturesStyle = styled.img`
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 1000px) {
+		top: 10%;
+		left: 10%;
+		width: 200px;
+		max-width: none;
+	}
 `;

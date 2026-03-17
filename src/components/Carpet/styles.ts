@@ -23,4 +23,10 @@ export const CarpetStyle = styled.img`
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 1000px) {
+		bottom: 12%;
+		right: 12%;
+		width: 400px;
+	}
 `;

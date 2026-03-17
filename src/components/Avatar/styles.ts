@@ -32,4 +32,10 @@ export const AvatarStyle = styled.img`
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 1000px) {
+		bottom: 20%;
+		width: 240px;
+		right: 25%;
+	}
 `;

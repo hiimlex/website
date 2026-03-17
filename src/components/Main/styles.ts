@@ -91,11 +91,17 @@ export const Name = styled.span`
 	font-weight: bold;
 	color: #f0c06a;
 	margin: 0;
-	text-shadow: -4px 4px 0 #ffffff, -2px 0 0 #ffffff, 0 2px 0 #ffffff,
-		0 -2px 0 #ffffff, 1px 1px #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff,
+	text-shadow:
+		-4px 4px 0 #ffffff,
+		-2px 0 0 #ffffff,
+		0 2px 0 #ffffff,
+		0 -2px 0 #ffffff,
+		1px 1px #ffffff,
+		-1px -1px 0 #ffffff,
+		1px -1px 0 #ffffff,
 		-1px 1px 0 #ffffff;
 
-		margin-left: 4px;
+	margin-left: 4px;
 
 	display: block;
 `;
@@ -116,6 +122,12 @@ export const DotLine = styled.div`
 	position: relative !important;
 `;
 
+export const SocialsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+`;
+
 export const SocialsText = styled.span`
 	text-transform: uppercase;
 	font-size: 1.8rem;
@@ -131,13 +143,14 @@ export const SocialsIcons = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: row;
-	margin-top: 12px;
+	gap: 12px;
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.a`
 	width: fit-content;
 	height: fit-content;
 	margin: 0 12px;
+	color: white;
 
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;

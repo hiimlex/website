@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Avatar from "../../components/Avatar";
 import Carpet from "../../components/Carpet";
 import Contact from "../../components/Contact";
@@ -34,30 +34,24 @@ const Home = () => {
 	}, []);
 
 	return (
-		<>
-			{width > 768 ? (
-				<Scenario>
-					{showContact && <Overlay />}
-					<Room>
-						<Square></Square>
-					</Room>
-					<Content>
-						<Header />
-						<Main />
+		<Scenario>
+			{showContact && <Overlay />}
+			<Room>
+				<Square></Square>
+			</Room>
+			<Content>
+				<Header />
+				<Main />
 
-						<Avatar />
-						<Carpet />
-						<Pictures />
-						<Phone onClick={handleShowContact} />
-						<Guitars />
-					</Content>
+				<Avatar />
+				<Carpet />
+				<Guitars />
+				<Pictures />
+				<Phone onClick={handleShowContact} />
+			</Content>
 
-					{showContact && <Contact onClick={handleShowContact} />}
-				</Scenario>
-			) : (
-				<h1>Nothing here for mobile yet :c</h1>
-			)}
-		</>
+			{showContact && <Contact onClick={handleShowContact} />}
+		</Scenario>
 	);
 };
 

@@ -35,4 +35,10 @@ export const PhoneStyle = styled.img`
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 1000px) {
+		width: 60px;
+		top: 15%;
+		right: 5% !important;
+	}
 `;
